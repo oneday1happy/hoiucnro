@@ -216,6 +216,7 @@ ol.guide p{color:#cfd7ea;font-size:15px}
         <li><a role="button" tabindex="0" data-page="home">Hướng dẫn</a></li>
         <li><a role="button" tabindex="0" data-page="su-kien">Sự kiện đang diễn ra</a></li>
         <li><a role="button" tabindex="0" data-page="san-boss">Hướng dẫn săn boss</a></li>
+        <li><a role="button" tabindex="0" data-page="nhom-zalo">Link tham gia nhóm</a></li>
       </ul>
     </nav>
   </div>
@@ -788,6 +789,34 @@ ol.guide p{color:#cfd7ea;font-size:15px}
   </section>
 </main>
 
+<main id="nhom-zalo" class="view" hidden>
+  <div class="hero">
+    <div class="wrap">
+      <h1>💬 Link tham gia nhóm</h1>
+      <p class="lede">Tham gia nhóm Zalo để nhận thông báo sự kiện, giftcode mới và được Admin hỗ trợ trực tiếp.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Tham gia nhóm ngay</h2>
+
+      <h3 class="sub">Cách 1 — Bấm vào link</h3>
+      <div class="body-copy">
+        <p><a href="https://zalo.me/g/0hie1dg54051rhoysghu" target="_blank" rel="noopener">https://zalo.me/g/0hie1dg54051rhoysghu</a></p>
+      </div>
+
+      <h3 class="sub">Cách 2 — Quét mã QR</h3>
+      <div class="body-copy">
+        <figure>
+          <img src="img/qr-zalo.jpg" alt="Mã QR nhóm Zalo Hồi Ức NRO" loading="lazy">
+          <figcaption>Mở Zalo và quét mã này để vào nhóm</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
 <div id="lightbox"><img src="" alt=""></div>
 
 <div id="qrOverlay" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
@@ -814,7 +843,7 @@ ol.guide p{color:#cfd7ea;font-size:15px}
   // ── Chuyển "trang" mà không tải lại ──
   var views = document.querySelectorAll('.view');
   var navLinks = document.querySelectorAll('[data-page]');
-  var titles = { 'home':'Hồi Ức NRO', 'su-kien':'Sự kiện đang diễn ra', 'san-boss':'Hướng dẫn săn boss' };
+  var titles = { 'home':'Hồi Ức NRO', 'su-kien':'Sự kiện đang diễn ra', 'san-boss':'Hướng dẫn săn boss', 'nhom-zalo':'Link tham gia nhóm' };
 
   function show(id){
     if(!document.getElementById(id)) id = 'home';
