@@ -1,24 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Hồi Ức NRO — Game nhập vai trên mobile &amp; PC</title>
-<meta name="description" content="Game nhập vai trực tuyến Hồi Ức NRO. Tải bản Android, iOS, PC hoặc Java. Chơi được trên cả máy cấu hình thấp.">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hồi Ức NRO">
-<meta property="og:description" content="Server cày chay 100%. Tải bản Android, iPad hoặc PC.">
-<meta property="og:image" content="https://hoiucnro.vercel.app/img/logo.jpg">
-<meta property="og:image:width" content="480">
-<meta property="og:image:height" content="480">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+<meta content="Game nhập vai trực tuyến Hồi Ức NRO. Tải bản Android, iOS, PC hoặc Java. Chơi được trên cả máy cấu hình thấp." name="description"/>
+<link href="img/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="img/favicon-180.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="website" property="og:type"/>
+<meta content="Hồi Ức NRO" property="og:title"/>
+<meta content="Server cày chay 100%. Tải bản Android, iPad hoặc PC." property="og:description"/>
+<meta content="https://hoiucnro.vercel.app/img/logo.jpg" property="og:image"/>
+<meta content="480" property="og:image:width"/>
+<meta content="480" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --ink:#0e1830;
@@ -204,678 +203,773 @@ ol.guide p{color:#cfd7ea;font-size:15px}
   *{transition:none!important;scroll-behavior:auto!important}
 }
 
+
+
+/* ===== UI UPGRADE 2026 ===== */
+:root{
+  --panel-glass:rgba(22,34,63,.82);
+  --panel-soft:rgba(29,44,80,.58);
+  --gold-soft:#ffd978;
+  --radius-lg:18px;
+}
+html{scroll-padding-top:88px}
+body{
+  background:
+    radial-gradient(700px 360px at 10% -5%,rgba(242,177,52,.10),transparent 65%),
+    radial-gradient(600px 340px at 95% 15%,rgba(224,83,58,.08),transparent 65%),
+    var(--ink);
+}
+header{
+  background:rgba(14,24,48,.88);
+  border-bottom:1px solid rgba(242,177,52,.55);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 8px 30px rgba(0,0,0,.18);
+}
+.bar{min-height:66px}
+.mark{width:40px;height:40px;border-radius:12px;box-shadow:0 8px 20px rgba(242,177,52,.20)}
+nav ul{gap:4px}
+nav a,nav button{border:1px solid transparent;transition:.18s ease}
+nav a:hover,nav button:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.06);transform:translateY(-1px)}
+nav a[aria-current="page"]{box-shadow:0 6px 18px rgba(242,177,52,.16)}
+.hero{padding:48px 0 42px;border-bottom:0}
+.hero-top{
+  padding:25px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:22px;
+  background:linear-gradient(145deg,rgba(29,44,80,.72),rgba(22,34,63,.70));
+  box-shadow:0 18px 45px rgba(0,0,0,.20);
+}
+.brand-img{width:138px;height:138px;border-radius:20px;border-color:rgba(242,177,52,.48);box-shadow:0 14px 30px rgba(0,0,0,.24)}
+.hero h1{background:linear-gradient(90deg,#fff,var(--gold-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lede{max-width:64ch}
+.rail{gap:12px;margin-top:26px}
+.dl{
+  min-height:110px;
+  border-radius:15px;
+  background:linear-gradient(145deg,rgba(22,34,63,.94),rgba(29,44,80,.82));
+  border-color:rgba(255,255,255,.07);
+  box-shadow:0 8px 22px rgba(0,0,0,.12);
+  transition:transform .18s,border-color .18s,background .18s,box-shadow .18s;
+}
+.dl:hover{transform:translateY(-3px);border-color:rgba(242,177,52,.65);box-shadow:0 14px 28px rgba(0,0,0,.18)}
+.dl.pay{box-shadow:0 12px 26px rgba(224,83,58,.18)}
+section{padding:46px 0;border-bottom-color:rgba(43,61,102,.72)}
+h2{font-size:24px;margin-bottom:20px}
+h2::before{width:5px;height:24px;border-radius:9px;background:linear-gradient(var(--amber),var(--ember))}
+.card{
+  border-radius:15px;
+  border-color:rgba(255,255,255,.065);
+  background:linear-gradient(145deg,rgba(22,34,63,.94),rgba(29,44,80,.72));
+  box-shadow:0 8px 22px rgba(0,0,0,.10);
+}
+.card:hover{border-color:rgba(242,177,52,.20)}
+.note{border:1px solid rgba(224,83,58,.25);border-left:4px solid var(--ember);border-radius:12px;background:rgba(224,83,58,.075)}
+figure img{border-radius:15px;border-color:rgba(255,255,255,.07)}
+
+/* Beginner guide: each h3 + its content becomes a visual category */
+#huong-dan .guide-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+#huong-dan .guide-item{
+  min-width:0;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(22,34,63,.94),rgba(29,44,80,.62));
+  box-shadow:0 10px 26px rgba(0,0,0,.12);
+  transition:transform .18s,border-color .18s,box-shadow .18s;
+}
+#huong-dan .guide-item:hover{transform:translateY(-2px);border-color:rgba(242,177,52,.30);box-shadow:0 15px 32px rgba(0,0,0,.17)}
+#huong-dan .guide-item > h3.sub{
+  margin:0!important;
+  padding:16px 18px;
+  font-size:16px;
+  color:#fff0c9;
+  background:rgba(255,255,255,.025);
+  border-bottom:1px solid rgba(255,255,255,.055);
+}
+#huong-dan .guide-item-body{padding:0 18px 18px}
+#huong-dan .guide-item-body > *:first-child{margin-top:14px}
+#huong-dan .guide-item .card{margin-top:14px;background:rgba(255,255,255,.025);box-shadow:none}
+#huong-dan .guide-item-wide{grid-column:1/-1}
+
+/* Event and boss category blocks */
+.view:not(#home) section h2{margin-bottom:20px}
+.view:not(#home) section{padding-top:42px;padding-bottom:42px}
+.view:not(#home) .card{padding:18px 20px}
+.view:not(#home) h3.sub{font-size:16px;color:#fff0c9;margin-top:24px}
+
+@media(max-width:820px){
+  .bar{align-items:flex-start}
+  nav{max-width:100%;overflow-x:auto;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav ul{flex-wrap:nowrap;width:max-content}
+  nav a,nav button{white-space:nowrap}
+  #huong-dan .guide-grid{grid-template-columns:1fr}
+  #huong-dan .guide-item-wide{grid-column:auto}
+}
+@media(max-width:640px){
+  .wrap{padding-left:15px;padding-right:15px}
+  .hero{padding:28px 0 30px}
+  .hero-top{padding:18px;border-radius:18px}
+  .brand-img{width:92px;height:92px;border-radius:15px}
+  .hero-top .hero-text{min-width:190px}
+  .hero h1{font-size:28px}
+  .rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+  .dl{min-height:96px;padding:14px 9px}
+  section{padding:36px 0}
+  #huong-dan .guide-grid{gap:12px}
+  #huong-dan .guide-item > h3.sub{padding:14px 15px}
+  #huong-dan .guide-item-body{padding:0 15px 15px}
+}
+@media(max-width:390px){.rail{grid-template-columns:1fr 1fr}.dl .os{font-size:14px}}
+
+.quick-categories{padding:0 0 34px;border-bottom:0}
+.quick-title{margin-bottom:13px;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.quick-card{min-height:116px;display:flex;flex-direction:column;justify-content:space-between;padding:16px;border:1px solid rgba(255,255,255,.07);border-radius:16px;background:linear-gradient(145deg,rgba(22,34,63,.94),rgba(29,44,80,.72));box-shadow:0 8px 22px rgba(0,0,0,.11);transition:.18s ease}
+.quick-card:hover{transform:translateY(-3px);border-color:rgba(242,177,52,.42);text-decoration:none;box-shadow:0 14px 28px rgba(0,0,0,.18)}
+.quick-icon{font-size:26px;line-height:1}.quick-card strong{display:block;color:var(--text);font-size:14.5px}.quick-card small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+@media(max-width:820px){.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:390px){.quick-card{padding:13px;min-height:105px}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="wrap bar">
-    <a class="logo" role="button" tabindex="0" data-page="home"><span class="mark" aria-hidden="true">H</span>Hồi Ức NRO</a>
-    <nav aria-label="Điều hướng chính">
-      <ul>
-        <li><a role="button" tabindex="0" data-page="home">Hướng dẫn</a></li>
-        <li><a role="button" tabindex="0" data-page="su-kien">Sự kiện đang diễn ra</a></li>
-        <li><a role="button" tabindex="0" data-page="lenh-game">Lệnh Game</a></li>
-        <li><a role="button" tabindex="0" data-page="san-boss">Hướng dẫn săn boss</a></li>
-        <li><a role="button" tabindex="0" data-page="nhom-zalo">Link tham gia nhóm</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="wrap bar">
+<a class="logo" data-page="home" role="button" tabindex="0"><span aria-hidden="true" class="mark">H</span>Hồi Ức NRO</a>
+<nav aria-label="Điều hướng chính">
+<ul>
+<li><a data-page="home" role="button" tabindex="0">Hướng dẫn</a></li>
+<li><a data-page="su-kien" role="button" tabindex="0">Sự kiện đang diễn ra</a></li>
+<li><a data-page="lenh-game" role="button" tabindex="0">Lệnh Game</a></li>
+<li><a data-page="san-boss" role="button" tabindex="0">Hướng dẫn săn boss</a></li>
+<li><a data-page="nhom-zalo" role="button" tabindex="0">Link tham gia nhóm</a></li>
+</ul>
+</nav>
+</div>
 </header>
-
-<main id="home" class="view">
+<main class="view" id="home">
 <div class="hero">
-  <div class="wrap hero-top">
-    <img class="brand-img" src="img/logo.jpg" alt="Hồi Ức Ngọc Rồng">
-    <div class="hero-text">
-      <h1>Tải Hồi Ức NRO</h1>
-      <p class="lede">Chọn bản phù hợp với máy của bạn. Cùng một tài khoản chơi được trên mọi nền tảng, dữ liệu nhân vật đồng bộ.</p>
-    </div>
-  </div>
-
-  <div class="wrap">
-      <div class="rail">
-      <a class="dl" href="https://drive.google.com/file/d/1aZn5bXI-C_pbwfSrG7K7OlwJg5l3gGDj/view?usp=sharing" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h12v9a2 2 0 0 1-2 2v2h-2v-2h-4v2H8v-2a2 2 0 0 1-2-2V9zm-2 .5a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zm13 0a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zM8.3 4.2 7.2 2.5l.9-.5 1.1 1.8A6.6 6.6 0 0 1 12 3.3c.9 0 1.8.2 2.6.5l1.1-1.8.9.5-1.1 1.7A5.6 5.6 0 0 1 18 8H6a5.6 5.6 0 0 1 2.3-3.8zM9.5 6a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4zm5 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z"/></svg>
-        <span class="os">Android APK 1</span>
-      </a>
-      <a class="dl" href="https://drive.google.com/file/d/1xGgxcOUnktufFZtXphvfNcWsKA0EkL-S/view?usp=sharing" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h12v9a2 2 0 0 1-2 2v2h-2v-2h-4v2H8v-2a2 2 0 0 1-2-2V9zm-2 .5a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zm13 0a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zM8.3 4.2 7.2 2.5l.9-.5 1.1 1.8A6.6 6.6 0 0 1 12 3.3c.9 0 1.8.2 2.6.5l1.1-1.8.9.5-1.1 1.7A5.6 5.6 0 0 1 18 8H6a5.6 5.6 0 0 1 2.3-3.8zM9.5 6a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4zm5 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z"/></svg>
-        <span class="os">Android APK 2</span>
-      </a>
-      <a class="dl" href="https://drive.google.com/file/d/1nTyiR05vqpf8uS6YvpyR3tzf9wcZgBf2/view?usp=sharing" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.2 12.7c0-2 1.6-3 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.4.7-3 .7-.6 0-1.5-.7-2.5-.7-1.3 0-2.5.7-3.2 1.9-1.4 2.4-.4 5.9 1 7.8.7.9 1.5 2 2.5 1.9 1-.04 1.4-.6 2.6-.6s1.5.6 2.6.6c1.1 0 1.8-.9 2.4-1.9.8-1.1 1.1-2.1 1.1-2.2 0 0-2.2-.8-2.3-3.3zM14.3 6c.5-.7.9-1.6.8-2.6-.8 0-1.8.5-2.4 1.2-.5.6-1 1.6-.8 2.5.9.1 1.8-.4 2.4-1.1z"/></svg>
-        <span class="os">iPad</span>
-      </a>
-      <a class="dl" href="https://drive.google.com/file/d/1p2l_renGji6Zgd2SLhvYBjHE7YPvs9bT/view?usp=sharing" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v11H3V5zm2 2v7h14V7H5zM2 18h20v2H2v-2z"/></svg>
-        <span class="os">PC</span>
-      </a>
-      <button class="dl pay" type="button" id="btnDonate">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1 3v6h16V9H4zm2 4h5v1H6v-1z"/></svg>
-        <span class="os">Donate</span><span class="ver">quét mã QR</span>
-      </button>
-      </div>  </div>
+<div class="wrap hero-top">
+<img alt="Hồi Ức Ngọc Rồng" class="brand-img" src="img/logo.jpg"/>
+<div class="hero-text">
+<h1>Tải Hồi Ức NRO</h1>
+<p class="lede">Chọn bản phù hợp với máy của bạn. Cùng một tài khoản chơi được trên mọi nền tảng, dữ liệu nhân vật đồng bộ.</p>
 </div>
-
+</div>
+<div class="wrap">
+<div class="rail">
+<a class="dl" href="https://drive.google.com/file/d/1aZn5bXI-C_pbwfSrG7K7OlwJg5l3gGDj/view?usp=sharing" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9h12v9a2 2 0 0 1-2 2v2h-2v-2h-4v2H8v-2a2 2 0 0 1-2-2V9zm-2 .5a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zm13 0a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zM8.3 4.2 7.2 2.5l.9-.5 1.1 1.8A6.6 6.6 0 0 1 12 3.3c.9 0 1.8.2 2.6.5l1.1-1.8.9.5-1.1 1.7A5.6 5.6 0 0 1 18 8H6a5.6 5.6 0 0 1 2.3-3.8zM9.5 6a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4zm5 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z"></path></svg>
+<span class="os">Android APK 1</span>
+</a>
+<a class="dl" href="https://drive.google.com/file/d/1xGgxcOUnktufFZtXphvfNcWsKA0EkL-S/view?usp=sharing" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9h12v9a2 2 0 0 1-2 2v2h-2v-2h-4v2H8v-2a2 2 0 0 1-2-2V9zm-2 .5a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zm13 0a1.5 1.5 0 0 1 3 0v6a1.5 1.5 0 0 1-3 0v-6zM8.3 4.2 7.2 2.5l.9-.5 1.1 1.8A6.6 6.6 0 0 1 12 3.3c.9 0 1.8.2 2.6.5l1.1-1.8.9.5-1.1 1.7A5.6 5.6 0 0 1 18 8H6a5.6 5.6 0 0 1 2.3-3.8zM9.5 6a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4zm5 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z"></path></svg>
+<span class="os">Android APK 2</span>
+</a>
+<a class="dl" href="https://drive.google.com/file/d/1nTyiR05vqpf8uS6YvpyR3tzf9wcZgBf2/view?usp=sharing" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.2 12.7c0-2 1.6-3 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.3-.1-2.4.7-3 .7-.6 0-1.5-.7-2.5-.7-1.3 0-2.5.7-3.2 1.9-1.4 2.4-.4 5.9 1 7.8.7.9 1.5 2 2.5 1.9 1-.04 1.4-.6 2.6-.6s1.5.6 2.6.6c1.1 0 1.8-.9 2.4-1.9.8-1.1 1.1-2.1 1.1-2.2 0 0-2.2-.8-2.3-3.3zM14.3 6c.5-.7.9-1.6.8-2.6-.8 0-1.8.5-2.4 1.2-.5.6-1 1.6-.8 2.5.9.1 1.8-.4 2.4-1.1z"></path></svg>
+<span class="os">iPad</span>
+</a>
+<a class="dl" href="https://drive.google.com/file/d/1p2l_renGji6Zgd2SLhvYBjHE7YPvs9bT/view?usp=sharing" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 5h18v11H3V5zm2 2v7h14V7H5zM2 18h20v2H2v-2z"></path></svg>
+<span class="os">PC</span>
+</a>
+<button class="dl pay" id="btnDonate" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 6h18a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1 3v6h16V9H4zm2 4h5v1H6v-1z"></path></svg>
+<span class="os">Donate</span><span class="ver">quét mã QR</span>
+</button>
+</div> </div>
+</div><section class="quick-categories"><div class="wrap">
+<div class="quick-title">Khám phá nhanh</div>
+<div class="quick-grid">
+<a class="quick-card" data-page="home" href="#"><span class="quick-icon">📖</span><span><strong>Hướng dẫn tân thủ</strong><small>Bắt đầu, giftcode, trang bị...</small></span></a>
+<a class="quick-card" data-page="su-kien" href="#"><span class="quick-icon">🔥</span><span><strong>Sự kiện</strong><small>Các hoạt động đang diễn ra</small></span></a>
+<a class="quick-card" data-page="san-boss" href="#"><span class="quick-icon">👹</span><span><strong>Săn Boss</strong><small>Vị trí và cách săn boss</small></span></a>
+<a class="quick-card" data-page="lenh-game" href="#"><span class="quick-icon">⌨️</span><span><strong>Lệnh Game</strong><small>Danh sách lệnh hữu ích</small></span></a>
+</div>
+</div></section>
 <section id="gioi-thieu">
-  <div class="wrap">
-    <h2>🌟 Thông tin cơ bản</h2>
-    <div class="body-copy">
-      <p>Chào mừng anh em đến với server! 👋 Server theo hướng <strong>cày chay 100%</strong>, không bán vật phẩm bằng tiền. Càng chăm chỉ cày cuốc, nhân vật càng mạnh! 💪</p>
-      <ul class="feat">
-        <li>⛏️ Cày chay 100% — không bán đồ, không buff sức mạnh. Phương châm: <strong>Cày là VIP!</strong></li>
-        <li>🎁 Game thủ có thể Donate ủng hộ cộng đồng để nhận thêm phúc lợi.</li>
-        <li>🛒 Các vật phẩm cần thiết đều mua trực tiếp tại NPC Santa.</li>
-        <li>☠️ Server đã fix gần như toàn bộ bug và trick.</li>
-        <li>🌑 <strong>21:00 hàng ngày</strong> — kéo team đi săn Ngọc Rồng Sao Đen để tăng sức mạnh.</li>
-      </ul>
-      <div class="note">👉 Có bất kỳ thắc mắc nào, anh em liên hệ Admin để được hỗ trợ chi tiết!</div>
-    </div>
-  </div>
-</section>
-
-<section id="huong-dan">
-  <div class="wrap">
-    <h2>📖 Hướng dẫn tân thủ</h2>
-
-    <h3 class="sub">Đăng ký Tài khoản, Đổi mật khẩu</h3>
-    <p class="body-copy">Liên hệ Admin Khoa trong nhóm Zalo.</p>
-
-    <h3 class="sub">🎁 Giftcode</h3>
-    <div class="body-copy">
-      <div class="card">
-        <ul class="codes">
-          <li><code>denbuquatrung</code></li>
-          <li><code>quatanthuspl</code></li>
-          <li><code>tnsmtml</code></li>
-          <li><code>metvcl</code></li>
-          <li><code>cuoituan</code></li>
-          <li><code>nhapdi</code></li>
-          <li><code>denbusk</code></li>
-          <li><code>2thang9</code></li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub">🐉 Đệ tử</h3>
-    <div class="body-copy">
-      <p>Tất cả các loại Đệ Tử đều săn được trong server. Tất cả đệ mặc được đồ full hành tinh.</p>
-      <figure>
-        <img src="img/de-tu-mac-do-full-hanh-tinh.jpg" alt="Đệ tử mặc đồ full hành tinh" loading="lazy">
-        <figcaption>Đệ tử mặc đồ của nhiều hành tinh trong game</figcaption>
-      </figure>
-      <div class="card">
-        <h4>👕 Đệ đặc biệt</h4>
-        <ul>
-          <li>Mabu, Fide, Broly, Berus, Whis</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>🥚 Trứng Bư</h4>
-        <ul>
-          <li>Broly: 5% rơi Trứng Bư</li>
-          <li>Super Broly: 40% rơi Trứng Bư</li>
-          <li>Mở ngẫu nhiên ra 4 loại Đệ, chỉ số 1% – 110% tùy nhân phẩm</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>⚡ Đệ Berus &amp; Whis</h4>
-        <ul>
-          <li>Berus: chỉ số 80 – 99%</li>
-          <li>Whis: chỉ số 100 – 110%</li>
-          <li>Up quái bằng Berus/Whis có thể rơi Thỏi Vàng</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub">💰 Vàng &amp; Coin</h3>
-    <div class="body-copy">
-      <div class="card">
-        <h4>🪙 Thỏi Vàng</h4>
-        <ul>
-          <li>Up quái bằng Đệ Berus / Whis</li>
-          <li>Săn Boss Tương Lai</li>
-          <li>Săn Tiểu Đội Sát Thủ Namec</li>
-          <li>Săn Boss Gatcha và các Boss khác</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>💎 Hồng Ngọc</h4>
-        <ul>
-          <li>Tham gia Đại Hội Võ Thuật và đua Top</li>
-          <li>Phần thưởng khoảng 50 – 200 Hồng Ngọc mỗi ngày</li>
-          <li>Mua chỉ số hồng ngọc ở Vegeta Thời Trang để mở kiếm hồng ngọc</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>📈 Up TNSM</h4>
-        <ul>
-          <li>Map BDKB hiện là nơi có TNSM cao nhất — nên tập trung up ở đây</li>
-          <li>Map đệ tử (ở Quy Lão Kame): nhớ mua bùa trong map đệ để up. Có tỉ lệ rơi đồ VIP: đồ Hủy Diệt, đồ 4s–8s, đồ Thần,...</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub">⚔️ Trang bị</h3>
-    <div class="body-copy">
-      <div class="card">
-        <h4>🔥 Set Kích Hoạt thường</h4>
-        <ul>
-          <li>Up tại 3 map đầu Ngũ Hành Sơn</li>
-          <li>Khu vực đầu làng Aru</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>🌟 Set Kích Hoạt VIP</h4>
-        <ul>
-          <li>Nâng cấp tại Bà Hạt Mít – Đảo Kame</li>
-          <li>Dùng 1 món đồ Hủy Diệt để đổi lấy 1 Set Kích Hoạt ngẫu nhiên</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>🌈 Trang phục Hợp Thể</h4>
-        <ul>
-          <li>Ba lựa chọn màu: Đỏ, Xanh Lá, Xanh Dương</li>
-          <li>Chỉ số: HP +40% · KI +40% · Sức đánh +40%</li>
-          <li>Ưu đãi giới hạn theo đợt mở bán</li>
-        </ul>
-      </div>
-      <figure>
-        <img src="img/trang-phuc-hop-the.jpg" alt="Mở bán trang phục Hợp Thể" loading="lazy">
-      </figure>
-      <div class="card">
-        <h4>💥 Set Nâng Cấp + Ngọc Rồng</h4>
-        <ul>
-          <li>Đồ Hủy Diệt nâng cấp để cộng ngẫu nhiên 5% Sức Đánh / HP / KI cho một món</li>
-          <li>Ngọc Rồng 3 sao săn từ Boss Xên, Fide Gold, hoặc mua tại sân sau siêu thị</li>
-          <li>Fide Gold xuất hiện toàn map, săn hơi lâu nhưng phần thưởng đáng giá</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub">👑 Đồ Thần Linh</h3>
-    <div class="body-copy">
-      <div class="card">
-        <h4>🛒 Bán tại Shop Ký Gửi – Siêu Thị</h4>
-        <ul>
-          <li>👕 Áo: 5 TV &nbsp;·&nbsp; 👖 Quần: 5 TV &nbsp;·&nbsp; 👟 Giày: 5 TV</li>
-          <li>🥊 Găng: 150 TV &nbsp;·&nbsp; 💍 Nhẫn: 300 TV</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>📍 Cách săn</h4>
-        <ul>
-          <li>Farm tại hành tinh Cold — tỉ lệ rơi đồ cao</li>
-          <li>Boss Tương Lai: rơi Đồ Thần Linh 100%, kèm 2 – 5 Thỏi Vàng ngẫu nhiên</li>
-          <li>Găng và Nhẫn Thần Linh: up tại Cold, mở từ Hộp Bư, hoặc mua tại VEGETA Thời Trang ở Đảo Kame và đầu mỗi làng</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub">💎 Phụ kiện &amp; vật phẩm nâng cấp</h3>
-    <div class="body-copy">
-      <div class="card">
-        <h4>👂 Bông Tai</h4>
-        <ul>
-          <li>Mua vật phẩm để nhận x3 Mảnh Vỡ Bông Tai</li>
-          <li>Up tại map Bang – khu Quy Lão Kame</li>
-          <li>Dư Thỏi Vàng thì mua tại VEGETA Thời Trang</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>📿 BTC2</h4>
-        <ul>
-          <li>BTC2 có 2 dòng chỉ số — khi nâng cấp hãy đập mục nâng cấp chỉ số 2 lần</li>
-          <li>Thay đổi chỉ số thì cả 2 dòng đều đổi, không giữ lại được 1 dòng</li>
-          <li>🍀 May mắn thì có thể max cả 2 dòng</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>🏆 Danh Hiệu VIP</h4>
-        <ul>
-          <li>Săn từ Boss Hợp Lực tại các map hang động</li>
-          <li>Cần Nhẫn Thời Không để di chuyển đến khu vực này</li>
-          <li>Boss rất mạnh, nên đi team đông người</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>🦵 Vòng Chân &amp; 🛹 Cải Trang / Ván Bay</h4>
-        <ul>
-          <li>Vòng Chân: nâng cấp nhận chỉ số ngẫu nhiên, farm mảnh tại Dashinka – Đảo Kame và khu vực đầu làng</li>
-          <li>Cải Trang &amp; Ván Bay: chủ yếu nhận qua các sự kiện, nội dung cập nhật liên tục tùy Admin</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="sub">🔥 Các mục tiêu cày cuốc</h3>
-    <div class="body-copy">
-      <div class="card">
-        <h4>👕 Săn Cải Trang HIT</h4>
-        <ul><li>Săn tại Boss Ác Mộng</li></ul>
-      </div>
-      <div class="card">
-        <h4>💰 Săn Vàng</h4>
-        <ul>
-          <li>Boss Gatcha, Boss Tương Lai, Boss Cold</li>
-          <li>Boss Mabu 14:00</li>
-          <li>Theo Kaio Shin – Đại Hội Võ Thuật 12:00</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>🌟 Săn Ngọc Rồng 3 Sao</h4>
-        <ul><li>Fide Gold, Xên, Berus tại TPVGT</li></ul>
-      </div>
-      <div class="card">
-        <h4>💥 Săn Đồ Hủy Diệt</h4>
-        <ul><li>Săn Berus / Whis tại Thành phố Vegeta — tỉ lệ rơi thấp, cần kiên trì</li></ul>
-      </div>
-      <div class="card">
-        <h4>🏆 Săn Danh Hiệu VIP</h4>
-        <ul><li>Săn Boss Hợp Lực — khuyến nghị ít nhất 8 người mới hạ được</li></ul>
-      </div>
-    </div>
-
-    <h3 class="sub">👹 Boss Gatcha C10</h3>
-    <div class="body-copy">
-      <p>Một trong những Boss đáng săn nhất:</p>
-      <ul class="feat">
-        <li>🥊 100% rơi Găng Hủy Diệt theo hành tinh của người Last Hit</li>
-        <li>🔥 Chỉ số Găng: 15% – 21% Sức Đánh</li>
-        <li>💰 Thưởng thêm 300 Thỏi Vàng</li>
-      </ul>
-      <div class="note">👉 Muốn săn Boss này hiệu quả, hãy lập team và tranh Last Hit!</div>
-    </div>
-
-    <h3 class="sub">🚀 Lộ trình gợi ý cho tân thủ</h3>
-    <div class="body-copy">
-      <p>Tân thủ → Up TNSM → Săn Đệ → Kiếm Vàng → Farm Đồ Thần Linh → Set Kích Hoạt → Đồ Hủy Diệt → Phụ kiện → Săn Boss VIP</p>
-      <div class="note">💪 Cày chăm chỉ = Mạnh! &nbsp; 🔥 Team đông = Săn Boss dễ! &nbsp; 🍀 Nhân phẩm tốt = Đổi đời!<br>⚡ Chúc anh em tân thủ sớm mạnh và trở thành VIP bằng chính sức cày của mình! 🐉</div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<main id="su-kien" class="view" hidden>
-  <div class="hero">
-    <div class="wrap">
-      <h1>🎉 Sự kiện đang diễn ra</h1>
-      <p class="lede">Các đợt sự kiện đang chạy trên máy chủ. Thời gian và phần thưởng có thể thay đổi, theo dõi thông báo trong game để cập nhật sớm nhất.</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <h2>🔥 Lửa Thần</h2>
-
-      <figure>
-        <img src="img/su-kien-lua-than.jpg" alt="Hướng dẫn chi tiết sự kiện Lửa Thần" loading="lazy">
-        <figcaption>Bấm vào ảnh để xem cỡ lớn</figcaption>
-      </figure>
-
-      <h3 class="sub">1. Thu thập nguyên liệu</h3>
-      <div class="body-copy">
-        <div class="card">
-          <ul>
-            <li><strong>Cùi Khô</strong> — diệt quái cấp thấp ở bản đồ tân thủ, tỉ lệ 1%. Up ở map có chữ "Rừng" (rừng bamboo, rừng nguyên sinh...)</li>
-            <li><strong>Ngọn Lửa</strong> — diệt quái ở Ngũ Hành Sơn, tỉ lệ 1/300</li>
-            <li><strong>Ngọn Đuốc</strong> — diệt Boss ở bản đồ Tương Lai, mỗi Boss rơi 5 – 7 cái (một số khu vực không rơi)</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 class="sub">2. Chế tạo Đuốc Lễ Hội — gặp NPC Lửa Thần</h3>
-      <div class="body-copy">
-        <div class="card">
-          <ul>
-            <li>🥈 <strong>Đuốc Bạc</strong>: 5 Cùi Khô + 5 Ngọn Lửa + 5 Ngọn Đuốc + 500 triệu Vàng</li>
-            <li>🥇 <strong>Đuốc Vàng</strong>: 10 Cùi Khô + 10 Ngọn Lửa + 10 Ngọn Đuốc + 5 Thỏi Vàng</li>
-          </ul>
-        </div>
-        <div class="note">⚠️ Phải có ô trống trong hành trang mới ghép được.</div>
-      </div>
-
-      <h3 class="sub">3. Quà từ Đuốc Bạc</h3>
-      <div class="body-copy">
-        <div class="card">
-          <ul>
-            <li>Cải trang Vegeta, Pet Đồng Hành</li>
-            <li>Ngọc Rồng 4 – 7 sao</li>
-            <li>Vật phẩm kháng, đá ma thuật</li>
-            <li>Hồn Lửa và các vật phẩm / rương hiếm</li>
-          </ul>
-        </div>
-        <div class="note">⚠️ Một số vật phẩm có 90 – 95% khả năng bị giới hạn 1 – 3 ngày.</div>
-      </div>
-
-      <h3 class="sub">4. Quà từ Đuốc Vàng</h3>
-      <div class="body-copy">
-        <div class="card">
-          <ul>
-            <li>🔥 <strong>Hắc Hỏa Ấn</strong> chỉ số ngẫu nhiên 1 – 10</li>
-            <li>Các loại Thạch: Tinh, Hỏa, Ngọc, Kim, Huyết</li>
-            <li>Ngọc Rồng 3 sao</li>
-            <li>Có cơ hội nhận trang bị / vật phẩm siêu hiếm</li>
-          </ul>
-        </div>
-        <div class="note">⚠️ Hắc Hỏa Ấn có 90% khả năng giới hạn 1 – 3 ngày.</div>
-      </div>
-
-      <h3 class="sub">🏆 Mốc toàn server</h3>
-      <div class="body-copy">
-        <p>Khi cả server cùng nhau đốt lửa đạt mốc <strong>2000 đuốc</strong>, người chơi sẽ nhận được 1 – 5 TV. Mỗi lần reset máy chủ, số đuốc server đã đốt sẽ về lại ban đầu.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <h2>💎 Tìm đá ngũ sắc</h2>
-      <figure>
-        <img src="img/da-ngu-sac.jpg" alt="Big update: truy tìm Đá Ngũ Sắc" loading="lazy">
-      </figure>
-      <div class="body-copy">
-        <div class="card">
-          <h4>📍 Địa điểm</h4>
-          <ul>
-            <li>Chỉ rớt tại 3 map: Hang động, bìa rừng nguyên thủy, rừng nguyên thủy</li>
-            <li>💍 Muốn vào 3 map này cần <strong>Nhẫn Thời Không</strong></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>⚔️ Cách farm</h4>
-          <ul>
-            <li>Đánh quái thường: tỉ lệ thấp, phù hợp cày lâu dài</li>
-            <li>👹 Đánh Boss: tỉ lệ rớt cao hơn nhiều, nên lập team săn Boss để kiếm nhanh</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>🛠️ Công dụng</h4>
-          <ul>
-            <li>Dùng cho tính năng Đục Lỗ và Ép Sao Pha Lê tại NPC Bà Hạt Mít và Bill</li>
-            <li>Dùng đập cải trang, tối đa 8 sao</li>
-          </ul>
-        </div>
-        <div class="note">👉 Nhớ đơn giản: có Nhẫn Thời Không → vào map → cày chậm thì đánh quái, kiếm nhanh thì săn Boss.</div>
-        <figure>
-          <img src="img/da-ngu-sac-mo-ta.jpg" alt="Mô tả vật phẩm Đá Ngũ Sắc trong game" loading="lazy">
-          <figcaption>Mô tả vật phẩm trong game</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="sub">⭐ Sao Biển</h3>
-      <div class="body-copy">
-        <p>Dùng Nhẫn Thời Không và farm quái tại 3 map trên có cơ hội cực hiếm rơi Sao Biển. Farm map 160 – 161 – 162 để săn.</p>
-        <div class="card">
-          <ul>
-            <li>💰 <strong>Dùng ngay</strong>: 1 Sao Biển → 3.000 Thỏi Vàng. Mỗi lần dùng cách nhau 3 phút</li>
-            <li>🔥 <strong>Gom đủ 5 cái</strong>: mang tới NPC Bà Hạt Mít → chọn Đổi Sao Biển → nhận 25.000 Thỏi Vàng</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 class="sub">🎲 Tính năng Đúp Sao Biển</h3>
-      <div class="body-copy">
-        <p>👨‍🦳 Đến NPC Bà Hạt Mít, dùng Sao Biển + Thỏi Vàng để đúp.</p>
-        <div class="card">
-          <h4>💰 Phí — 500 Thỏi Vàng cho mỗi Sao Biển muốn đúp</h4>
-          <ul>
-            <li>1 Sao → 500 vàng</li>
-            <li>2 Sao → 1.000 vàng</li>
-            <li>3 Sao → 1.500 vàng</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>🎯 Tỉ lệ thắng thua</h4>
-          <ul>
-            <li>🟢 25% thắng: nhận gấp đôi số Sao Biển đã cược</li>
-            <li>🔴 75% thua: mất toàn bộ Sao Biển và Thỏi Vàng đã bỏ vào</li>
-          </ul>
-        </div>
-        <div class="note">⚠️ Đây là tính năng may rủi rất cao, cân nhắc kỹ trước khi chơi và nhớ để đủ ô trống trong hành trang.</div>
-        <p>Cơ hội làm giàu chia đều cho tất cả mọi người, không quan trọng đồ xịn hay cùi — chỉ quan trọng anh em cày chăm và nhân phẩm tốt tới đâu!</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <h2>👶 Dắt Bư về nhà</h2>
-      <figure>
-        <img src="img/su-kien-dan-bu.jpg" alt="Sự kiện dẫn Bư nhận thưởng — hộ tống Mabu đến Đảo Kame" loading="lazy">
-      </figure>
-      <div class="body-copy">
-        <div class="card">
-          <h4>Cách chơi</h4>
-          <ul>
-            <li>Gặp Osin ở làng Aru để nhận Mabu</li>
-            <li>Hộ tống Bư về nhà — đi từ từ và tránh để quái tấn công Mabu</li>
-            <li>Trả Mabu về Đảo Kame và nhận thưởng</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>🎁 Phần thưởng</h4>
-          <ul>
-            <li>80% — 3 – 5 TV</li>
-            <li>15% — đồ Thần Linh</li>
-            <li>4% — cải trang Noel</li>
-            <li>1% — Găng Thần và Nhẫn Thần Linh</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<main id="lenh-game" class="view" hidden>
-  <div class="hero">
-    <div class="wrap">
-      <h1>⌨️ Lệnh Game</h1>
-      <p class="lede">Các lệnh gõ trực tiếp trong khung chat để hỗ trợ chơi nhanh hơn.</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <div class="body-copy">
-        <div class="card">
-          <h4>⚡ Tốc độ game</h4>
-          <ul>
-            <li><strong>Cheat 1-10</strong>: chỉnh tốc độ game</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>🎒 Sapxep</h4>
-          <ul>
-            <li><strong>Sapxep</strong>: gộp Thỏi Vàng lại và sắp xếp lại hành trang (không gộp được chung với Thỏi Vàng khóa)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>🥚 Automotrungvip</h4>
-          <ul>
-            <li><strong>Automotrungvip</strong>: mở hết trứng có trong hành trang</li>
-            <li>Khi ra Whis sẽ dừng; nếu không có Whis sẽ chốt con cuối cùng</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>🏃 Tốc độ chạy</h4>
-          <ul>
-            <li><strong>S1-10</strong>: chỉnh tốc độ chạy</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<main id="san-boss" class="view" hidden>
-  <div class="hero">
-    <div class="wrap">
-      <h1>👹 Hướng dẫn săn boss</h1>
-      <p class="lede">Boss xuất hiện theo giờ cố định tại các bản đồ cấp cao. Chuẩn bị kỹ và rủ thêm người cùng bang trước khi vào.</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <h2>🔥 Siêu Boss Ma Thần Hợp Lực</h2>
-      <figure>
-        <img src="img/boss-ma-than.jpg" alt="Thông báo cập nhật Boss Ma Thần Hợp Lực" loading="lazy">
-      </figure>
-      <div class="body-copy">
-        <p>💥 VIP hay tân thủ vào đây đều có cơ hội như nhau. Boss này <strong>không cần Top Damage, không cần Last Hit</strong> — chỉ cần anh em chịu khó góp 1 hit là đã có cơ hội nhận siêu vật phẩm! 🎰</p>
-      </div>
-
-      <h3 class="sub">🛡️ Cơ chế Khiên Hư Vô — càng đông càng dễ hạ</h3>
-      <div class="body-copy">
-        <p>Ma Thần Hợp Lực sở hữu <strong>Khiên Bất Tử</strong>. ⚔️ Mọi đòn đánh vào Boss, dù sát thương mạnh đến đâu, cũng chỉ gây 1 Hit.</p>
-        <div class="card">
-          <h4>💢 Muốn phá khiên?</h4>
-          <ul>
-            <li>👉 Toàn bộ người chơi trong map phải cùng nhau tấn công Boss</li>
-            <li>🔥 Khi Boss nhận đủ <strong>200 HIT trong vòng 15 giây</strong> → 💥 KHIÊN VỠ!</li>
-            <li>😵 Boss bị choáng <strong>20 giây</strong></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>Trong 20 giây choáng</h4>
-          <ul>
-            <li>🔴 Khiên biến mất</li>
-            <li>🔴 Boss nhận 100% sát thương</li>
-            <li>🔴 Anh em tha hồ xả skill, tung chiêu cuối, dồn damage</li>
-          </ul>
-        </div>
-        <div class="note">⏰ Hết 20 giây, Boss kích hoạt lại Khiên và vòng chiến đấu tiếp tục. Càng nhiều người đánh, Boss càng nhanh mất khiên! 🤝</div>
-      </div>
-
-      <h3 class="sub">🎰 Phần thưởng — xổ số nhân phẩm</h3>
-      <div class="body-copy">
-        <div class="card">
-          <ul>
-            <li>❌ KHÔNG ưu tiên Last Hit</li>
-            <li>❌ KHÔNG ưu tiên người gây sát thương cao nhất</li>
-            <li>🎯 Chỉ cần bạn đã đánh Boss <strong>ít nhất 1 hit</strong> → được ghi danh!</li>
-          </ul>
-        </div>
-        <p>Khi Boss bị tiêu diệt, hệ thống quay xổ số ngẫu nhiên 1 người may mắn trong danh sách. 🏆 Người được chọn nhận <strong>Nhẫn Hủy Diệt</strong>.</p>
-      </div>
-
-      <h3 class="sub">💍 Nhẫn Hủy Diệt</h3>
-      <div class="body-copy">
-        <div class="card">
-          <h4>🎲 Chỉ số random cực độ</h4>
-          <ul>
-            <li>❤️ % HP &nbsp;·&nbsp; 💙 % KI &nbsp;·&nbsp; ⚔️ % Sức đánh</li>
-            <li>Random độ VIP: từ 1% → 8%</li>
-          </ul>
-        </div>
-        <div class="note">🔒 Nhẫn Hủy Diệt khóa giao dịch vĩnh viễn — không mua, không bán, không chuyển nhượng. Muốn sở hữu chỉ có một cách: tự mình săn Boss! 🔥</div>
-        <p>🚨 Đừng đứng nhìn — lập tổ đội, gọi anh em, kéo cả bang lên map, cùng nhau spam hit phá Khiên. Biết đâu người trúng Nhẫn Hủy Diệt tiếp theo chính là bạn! 😎</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <h2>💎 Tẩy tủy Cải trang Cậu Hít</h2>
-      <div class="body-copy">
-        <p>Cải trang xịn chưa chắc đã là mạnh nhất. Muốn biến Cải trang Cậu Hít thành cực phẩm thì đưa vào lò Tẩy Tủy và thử thách nhân phẩm! 😈</p>
-        <div class="card">
-          <ul>
-            <li>📍 NPC phụ trách: <strong>Bà Hạt Mít</strong></li>
-            <li>🏝️ Địa điểm: <strong>Đảo Kame</strong></li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 class="sub">⚡ Tẩy tủy là gì?</h3>
-      <div class="body-copy">
-        <p>Mang Cải trang Cậu Hít đến gặp Bà Hạt Mít → chọn "Tẩy tủy". ✨ Chỉ số cũ sẽ được xóa bỏ và thay bằng chỉ số mới ngẫu nhiên.</p>
-        <div class="card">
-          <h4>🎲 2 chỉ số có thể nhận</h4>
-          <ul>
-            <li>⚔️ Sức đánh: từ 28% → 33%</li>
-            <li>💥 Sức đánh chí mạng: từ 30% → 60%</li>
-          </ul>
-        </div>
-        <div class="note">👉 Nhân phẩm càng cao, chỉ số càng đẹp. Biết đâu một lần tẩy lại ra ngay Cậu Hít max chỉ số! 🔥</div>
-      </div>
-
-      <h3 class="sub">🛡️ Không mất hạn sử dụng</h3>
-      <div class="body-copy">
-        <div class="card">
-          <ul>
-            <li>♾️ Đồ vĩnh viễn → vẫn vĩnh viễn</li>
-            <li>⏳ Đồ có thời hạn → giữ nguyên thời hạn</li>
-          </ul>
-        </div>
-        <p>Không có chuyện tẩy xong rồi bay ngày đâu nhé 😎</p>
-      </div>
-
-      <h3 class="sub">⚖️ Quy tắc &amp; chi phí</h3>
-      <div class="body-copy">
-        <div class="card">
-          <h4>Giới hạn</h4>
-          <ul>
-            <li>Mỗi Cải trang Cậu Hít chỉ được tẩy tủy <strong>tối đa 3 lần</strong></li>
-            <li>Sau 3 lần, trang bị khóa vĩnh viễn tính năng Tẩy Tủy</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>💰 Chi phí tăng dần</h4>
-          <ul>
-            <li>🥇 Lần 1: 50 Thỏi Vàng</li>
-            <li>🥈 Lần 2: 70 Thỏi Vàng</li>
-            <li>🥉 Lần 3: 100 Thỏi Vàng</li>
-          </ul>
-        </div>
-        <div class="note">🔥 Cân nhắc thật kỹ trước mỗi lần tẩy — đẹp thì giữ, chưa đẹp thì đánh cược tiếp! 🎰</div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<main id="nhom-zalo" class="view" hidden>
-  <div class="hero">
-    <div class="wrap">
-      <h1>💬 Link tham gia nhóm</h1>
-      <p class="lede">Tham gia nhóm Zalo để nhận thông báo sự kiện, giftcode mới và được Admin hỗ trợ trực tiếp.</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <h2>Tham gia nhóm ngay</h2>
-
-      <h3 class="sub">Cách 1 — Bấm vào link</h3>
-      <div class="body-copy">
-        <p><a href="https://zalo.me/g/0hie1dg54051rhoysghu" target="_blank" rel="noopener">https://zalo.me/g/0hie1dg54051rhoysghu</a></p>
-      </div>
-
-      <h3 class="sub">Cách 2 — Quét mã QR</h3>
-      <div class="body-copy">
-        <figure>
-          <img src="img/qr-zalo.jpg" alt="Mã QR nhóm Zalo Hồi Ức NRO" loading="lazy">
-          <figcaption>Mở Zalo và quét mã này để vào nhóm</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-</main>
-
-<div id="lightbox"><img src="" alt=""></div>
-
-<div id="qrOverlay" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
-  <div class="qr-box">
-    <h3 id="qrTitle">Donate</h3>
-    <p>Quét mã bên dưới để ủng hộ máy chủ.</p>
-    <img src="img/qr.jpg" alt="Mã QR chuyển khoản">
-    <p class="qr-note">Cập nhật tiền donate liên tục, thống kê rõ ràng.</p>
-    <button class="qr-close" type="button">Đóng</button>
-  </div>
+<div class="wrap">
+<h2>🌟 Thông tin cơ bản</h2>
+<div class="body-copy">
+<p>Chào mừng anh em đến với server! 👋 Server theo hướng <strong>cày chay 100%</strong>, không bán vật phẩm bằng tiền. Càng chăm chỉ cày cuốc, nhân vật càng mạnh! 💪</p>
+<ul class="feat">
+<li>⛏️ Cày chay 100% — không bán đồ, không buff sức mạnh. Phương châm: <strong>Cày là VIP!</strong></li>
+<li>🎁 Game thủ có thể Donate ủng hộ cộng đồng để nhận thêm phúc lợi.</li>
+<li>🛒 Các vật phẩm cần thiết đều mua trực tiếp tại NPC Santa.</li>
+<li>☠️ Server đã fix gần như toàn bộ bug và trick.</li>
+<li>🌑 <strong>21:00 hàng ngày</strong> — kéo team đi săn Ngọc Rồng Sao Đen để tăng sức mạnh.</li>
+</ul>
+<div class="note">👉 Có bất kỳ thắc mắc nào, anh em liên hệ Admin để được hỗ trợ chi tiết!</div>
 </div>
-
+</div>
+</section>
+<section id="huong-dan">
+<div class="wrap">
+<h2>📖 Hướng dẫn tân thủ</h2><div class="guide-grid"><article class="guide-item"><h3 class="sub">Đăng ký Tài khoản, Đổi mật khẩu</h3><div class="guide-item-body">
+<p class="body-copy">Liên hệ Admin Khoa trong nhóm Zalo.</p>
+</div></article><article class="guide-item"><h3 class="sub">🎁 Giftcode</h3><div class="guide-item-body">
+<div class="body-copy">
+<div class="card">
+<ul class="codes">
+<li><code>denbuquatrung</code></li>
+<li><code>quatanthuspl</code></li>
+<li><code>tnsmtml</code></li>
+<li><code>metvcl</code></li>
+<li><code>cuoituan</code></li>
+<li><code>nhapdi</code></li>
+<li><code>denbusk</code></li>
+<li><code>2thang9</code></li>
+</ul>
+</div>
+</div>
+</div></article><article class="guide-item guide-item-wide"><h3 class="sub">🐉 Đệ tử</h3><div class="guide-item-body">
+<div class="body-copy">
+<p>Tất cả các loại Đệ Tử đều săn được trong server. Tất cả đệ mặc được đồ full hành tinh.</p>
+<figure>
+<img alt="Đệ tử mặc đồ full hành tinh" loading="lazy" src="img/de-tu-mac-do-full-hanh-tinh.jpg"/>
+<figcaption>Đệ tử mặc đồ của nhiều hành tinh trong game</figcaption>
+</figure>
+<div class="card">
+<h4>👕 Đệ đặc biệt</h4>
+<ul>
+<li>Mabu, Fide, Broly, Berus, Whis</li>
+</ul>
+</div>
+<div class="card">
+<h4>🥚 Trứng Bư</h4>
+<ul>
+<li>Broly: 5% rơi Trứng Bư</li>
+<li>Super Broly: 40% rơi Trứng Bư</li>
+<li>Mở ngẫu nhiên ra 4 loại Đệ, chỉ số 1% – 110% tùy nhân phẩm</li>
+</ul>
+</div>
+<div class="card">
+<h4>⚡ Đệ Berus &amp; Whis</h4>
+<ul>
+<li>Berus: chỉ số 80 – 99%</li>
+<li>Whis: chỉ số 100 – 110%</li>
+<li>Up quái bằng Berus/Whis có thể rơi Thỏi Vàng</li>
+</ul>
+</div>
+</div>
+</div></article><article class="guide-item"><h3 class="sub">💰 Vàng &amp; Coin</h3><div class="guide-item-body">
+<div class="body-copy">
+<div class="card">
+<h4>🪙 Thỏi Vàng</h4>
+<ul>
+<li>Up quái bằng Đệ Berus / Whis</li>
+<li>Săn Boss Tương Lai</li>
+<li>Săn Tiểu Đội Sát Thủ Namec</li>
+<li>Săn Boss Gatcha và các Boss khác</li>
+</ul>
+</div>
+<div class="card">
+<h4>💎 Hồng Ngọc</h4>
+<ul>
+<li>Tham gia Đại Hội Võ Thuật và đua Top</li>
+<li>Phần thưởng khoảng 50 – 200 Hồng Ngọc mỗi ngày</li>
+<li>Mua chỉ số hồng ngọc ở Vegeta Thời Trang để mở kiếm hồng ngọc</li>
+</ul>
+</div>
+<div class="card">
+<h4>📈 Up TNSM</h4>
+<ul>
+<li>Map BDKB hiện là nơi có TNSM cao nhất — nên tập trung up ở đây</li>
+<li>Map đệ tử (ở Quy Lão Kame): nhớ mua bùa trong map đệ để up. Có tỉ lệ rơi đồ VIP: đồ Hủy Diệt, đồ 4s–8s, đồ Thần,...</li>
+</ul>
+</div>
+</div>
+</div></article><article class="guide-item guide-item-wide"><h3 class="sub">⚔️ Trang bị</h3><div class="guide-item-body">
+<div class="body-copy">
+<div class="card">
+<h4>🔥 Set Kích Hoạt thường</h4>
+<ul>
+<li>Up tại 3 map đầu Ngũ Hành Sơn</li>
+<li>Khu vực đầu làng Aru</li>
+</ul>
+</div>
+<div class="card">
+<h4>🌟 Set Kích Hoạt VIP</h4>
+<ul>
+<li>Nâng cấp tại Bà Hạt Mít – Đảo Kame</li>
+<li>Dùng 1 món đồ Hủy Diệt để đổi lấy 1 Set Kích Hoạt ngẫu nhiên</li>
+</ul>
+</div>
+<div class="card">
+<h4>🌈 Trang phục Hợp Thể</h4>
+<ul>
+<li>Ba lựa chọn màu: Đỏ, Xanh Lá, Xanh Dương</li>
+<li>Chỉ số: HP +40% · KI +40% · Sức đánh +40%</li>
+<li>Ưu đãi giới hạn theo đợt mở bán</li>
+</ul>
+</div>
+<figure>
+<img alt="Mở bán trang phục Hợp Thể" loading="lazy" src="img/trang-phuc-hop-the.jpg"/>
+</figure>
+<div class="card">
+<h4>💥 Set Nâng Cấp + Ngọc Rồng</h4>
+<ul>
+<li>Đồ Hủy Diệt nâng cấp để cộng ngẫu nhiên 5% Sức Đánh / HP / KI cho một món</li>
+<li>Ngọc Rồng 3 sao săn từ Boss Xên, Fide Gold, hoặc mua tại sân sau siêu thị</li>
+<li>Fide Gold xuất hiện toàn map, săn hơi lâu nhưng phần thưởng đáng giá</li>
+</ul>
+</div>
+</div>
+</div></article><article class="guide-item"><h3 class="sub">👑 Đồ Thần Linh</h3><div class="guide-item-body">
+<div class="body-copy">
+<div class="card">
+<h4>🛒 Bán tại Shop Ký Gửi – Siêu Thị</h4>
+<ul>
+<li>👕 Áo: 5 TV  ·  👖 Quần: 5 TV  ·  👟 Giày: 5 TV</li>
+<li>🥊 Găng: 150 TV  ·  💍 Nhẫn: 300 TV</li>
+</ul>
+</div>
+<div class="card">
+<h4>📍 Cách săn</h4>
+<ul>
+<li>Farm tại hành tinh Cold — tỉ lệ rơi đồ cao</li>
+<li>Boss Tương Lai: rơi Đồ Thần Linh 100%, kèm 2 – 5 Thỏi Vàng ngẫu nhiên</li>
+<li>Găng và Nhẫn Thần Linh: up tại Cold, mở từ Hộp Bư, hoặc mua tại VEGETA Thời Trang ở Đảo Kame và đầu mỗi làng</li>
+</ul>
+</div>
+</div>
+</div></article><article class="guide-item"><h3 class="sub">💎 Phụ kiện &amp; vật phẩm nâng cấp</h3><div class="guide-item-body">
+<div class="body-copy">
+<div class="card">
+<h4>👂 Bông Tai</h4>
+<ul>
+<li>Mua vật phẩm để nhận x3 Mảnh Vỡ Bông Tai</li>
+<li>Up tại map Bang – khu Quy Lão Kame</li>
+<li>Dư Thỏi Vàng thì mua tại VEGETA Thời Trang</li>
+</ul>
+</div>
+<div class="card">
+<h4>📿 BTC2</h4>
+<ul>
+<li>BTC2 có 2 dòng chỉ số — khi nâng cấp hãy đập mục nâng cấp chỉ số 2 lần</li>
+<li>Thay đổi chỉ số thì cả 2 dòng đều đổi, không giữ lại được 1 dòng</li>
+<li>🍀 May mắn thì có thể max cả 2 dòng</li>
+</ul>
+</div>
+<div class="card">
+<h4>🏆 Danh Hiệu VIP</h4>
+<ul>
+<li>Săn từ Boss Hợp Lực tại các map hang động</li>
+<li>Cần Nhẫn Thời Không để di chuyển đến khu vực này</li>
+<li>Boss rất mạnh, nên đi team đông người</li>
+</ul>
+</div>
+<div class="card">
+<h4>🦵 Vòng Chân &amp; 🛹 Cải Trang / Ván Bay</h4>
+<ul>
+<li>Vòng Chân: nâng cấp nhận chỉ số ngẫu nhiên, farm mảnh tại Dashinka – Đảo Kame và khu vực đầu làng</li>
+<li>Cải Trang &amp; Ván Bay: chủ yếu nhận qua các sự kiện, nội dung cập nhật liên tục tùy Admin</li>
+</ul>
+</div>
+</div>
+</div></article><article class="guide-item"><h3 class="sub">🔥 Các mục tiêu cày cuốc</h3><div class="guide-item-body">
+<div class="body-copy">
+<div class="card">
+<h4>👕 Săn Cải Trang HIT</h4>
+<ul><li>Săn tại Boss Ác Mộng</li></ul>
+</div>
+<div class="card">
+<h4>💰 Săn Vàng</h4>
+<ul>
+<li>Boss Gatcha, Boss Tương Lai, Boss Cold</li>
+<li>Boss Mabu 14:00</li>
+<li>Theo Kaio Shin – Đại Hội Võ Thuật 12:00</li>
+</ul>
+</div>
+<div class="card">
+<h4>🌟 Săn Ngọc Rồng 3 Sao</h4>
+<ul><li>Fide Gold, Xên, Berus tại TPVGT</li></ul>
+</div>
+<div class="card">
+<h4>💥 Săn Đồ Hủy Diệt</h4>
+<ul><li>Săn Berus / Whis tại Thành phố Vegeta — tỉ lệ rơi thấp, cần kiên trì</li></ul>
+</div>
+<div class="card">
+<h4>🏆 Săn Danh Hiệu VIP</h4>
+<ul><li>Săn Boss Hợp Lực — khuyến nghị ít nhất 8 người mới hạ được</li></ul>
+</div>
+</div>
+</div></article><article class="guide-item"><h3 class="sub">👹 Boss Gatcha C10</h3><div class="guide-item-body">
+<div class="body-copy">
+<p>Một trong những Boss đáng săn nhất:</p>
+<ul class="feat">
+<li>🥊 100% rơi Găng Hủy Diệt theo hành tinh của người Last Hit</li>
+<li>🔥 Chỉ số Găng: 15% – 21% Sức Đánh</li>
+<li>💰 Thưởng thêm 300 Thỏi Vàng</li>
+</ul>
+<div class="note">👉 Muốn săn Boss này hiệu quả, hãy lập team và tranh Last Hit!</div>
+</div>
+</div></article><article class="guide-item"><h3 class="sub">🚀 Lộ trình gợi ý cho tân thủ</h3><div class="guide-item-body">
+<div class="body-copy">
+<p>Tân thủ → Up TNSM → Săn Đệ → Kiếm Vàng → Farm Đồ Thần Linh → Set Kích Hoạt → Đồ Hủy Diệt → Phụ kiện → Săn Boss VIP</p>
+<div class="note">💪 Cày chăm chỉ = Mạnh!   🔥 Team đông = Săn Boss dễ!   🍀 Nhân phẩm tốt = Đổi đời!<br/>⚡ Chúc anh em tân thủ sớm mạnh và trở thành VIP bằng chính sức cày của mình! 🐉</div>
+</div>
+</div></article></div>
+</div>
+</section>
+</main>
+<main class="view" hidden="" id="su-kien">
+<div class="hero">
+<div class="wrap">
+<h1>🎉 Sự kiện đang diễn ra</h1>
+<p class="lede">Các đợt sự kiện đang chạy trên máy chủ. Thời gian và phần thưởng có thể thay đổi, theo dõi thông báo trong game để cập nhật sớm nhất.</p>
+</div>
+</div>
+<section>
+<div class="wrap">
+<h2>🔥 Lửa Thần</h2>
+<figure>
+<img alt="Hướng dẫn chi tiết sự kiện Lửa Thần" loading="lazy" src="img/su-kien-lua-than.jpg"/>
+<figcaption>Bấm vào ảnh để xem cỡ lớn</figcaption>
+</figure>
+<h3 class="sub">1. Thu thập nguyên liệu</h3>
+<div class="body-copy">
+<div class="card">
+<ul>
+<li><strong>Cùi Khô</strong> — diệt quái cấp thấp ở bản đồ tân thủ, tỉ lệ 1%. Up ở map có chữ "Rừng" (rừng bamboo, rừng nguyên sinh...)</li>
+<li><strong>Ngọn Lửa</strong> — diệt quái ở Ngũ Hành Sơn, tỉ lệ 1/300</li>
+<li><strong>Ngọn Đuốc</strong> — diệt Boss ở bản đồ Tương Lai, mỗi Boss rơi 5 – 7 cái (một số khu vực không rơi)</li>
+</ul>
+</div>
+</div>
+<h3 class="sub">2. Chế tạo Đuốc Lễ Hội — gặp NPC Lửa Thần</h3>
+<div class="body-copy">
+<div class="card">
+<ul>
+<li>🥈 <strong>Đuốc Bạc</strong>: 5 Cùi Khô + 5 Ngọn Lửa + 5 Ngọn Đuốc + 500 triệu Vàng</li>
+<li>🥇 <strong>Đuốc Vàng</strong>: 10 Cùi Khô + 10 Ngọn Lửa + 10 Ngọn Đuốc + 5 Thỏi Vàng</li>
+</ul>
+</div>
+<div class="note">⚠️ Phải có ô trống trong hành trang mới ghép được.</div>
+</div>
+<h3 class="sub">3. Quà từ Đuốc Bạc</h3>
+<div class="body-copy">
+<div class="card">
+<ul>
+<li>Cải trang Vegeta, Pet Đồng Hành</li>
+<li>Ngọc Rồng 4 – 7 sao</li>
+<li>Vật phẩm kháng, đá ma thuật</li>
+<li>Hồn Lửa và các vật phẩm / rương hiếm</li>
+</ul>
+</div>
+<div class="note">⚠️ Một số vật phẩm có 90 – 95% khả năng bị giới hạn 1 – 3 ngày.</div>
+</div>
+<h3 class="sub">4. Quà từ Đuốc Vàng</h3>
+<div class="body-copy">
+<div class="card">
+<ul>
+<li>🔥 <strong>Hắc Hỏa Ấn</strong> chỉ số ngẫu nhiên 1 – 10</li>
+<li>Các loại Thạch: Tinh, Hỏa, Ngọc, Kim, Huyết</li>
+<li>Ngọc Rồng 3 sao</li>
+<li>Có cơ hội nhận trang bị / vật phẩm siêu hiếm</li>
+</ul>
+</div>
+<div class="note">⚠️ Hắc Hỏa Ấn có 90% khả năng giới hạn 1 – 3 ngày.</div>
+</div>
+<h3 class="sub">🏆 Mốc toàn server</h3>
+<div class="body-copy">
+<p>Khi cả server cùng nhau đốt lửa đạt mốc <strong>2000 đuốc</strong>, người chơi sẽ nhận được 1 – 5 TV. Mỗi lần reset máy chủ, số đuốc server đã đốt sẽ về lại ban đầu.</p>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap">
+<h2>💎 Tìm đá ngũ sắc</h2>
+<figure>
+<img alt="Big update: truy tìm Đá Ngũ Sắc" loading="lazy" src="img/da-ngu-sac.jpg"/>
+</figure>
+<div class="body-copy">
+<div class="card">
+<h4>📍 Địa điểm</h4>
+<ul>
+<li>Chỉ rớt tại 3 map: Hang động, bìa rừng nguyên thủy, rừng nguyên thủy</li>
+<li>💍 Muốn vào 3 map này cần <strong>Nhẫn Thời Không</strong></li>
+</ul>
+</div>
+<div class="card">
+<h4>⚔️ Cách farm</h4>
+<ul>
+<li>Đánh quái thường: tỉ lệ thấp, phù hợp cày lâu dài</li>
+<li>👹 Đánh Boss: tỉ lệ rớt cao hơn nhiều, nên lập team săn Boss để kiếm nhanh</li>
+</ul>
+</div>
+<div class="card">
+<h4>🛠️ Công dụng</h4>
+<ul>
+<li>Dùng cho tính năng Đục Lỗ và Ép Sao Pha Lê tại NPC Bà Hạt Mít và Bill</li>
+<li>Dùng đập cải trang, tối đa 8 sao</li>
+</ul>
+</div>
+<div class="note">👉 Nhớ đơn giản: có Nhẫn Thời Không → vào map → cày chậm thì đánh quái, kiếm nhanh thì săn Boss.</div>
+<figure>
+<img alt="Mô tả vật phẩm Đá Ngũ Sắc trong game" loading="lazy" src="img/da-ngu-sac-mo-ta.jpg"/>
+<figcaption>Mô tả vật phẩm trong game</figcaption>
+</figure>
+</div>
+<h3 class="sub">⭐ Sao Biển</h3>
+<div class="body-copy">
+<p>Dùng Nhẫn Thời Không và farm quái tại 3 map trên có cơ hội cực hiếm rơi Sao Biển. Farm map 160 – 161 – 162 để săn.</p>
+<div class="card">
+<ul>
+<li>💰 <strong>Dùng ngay</strong>: 1 Sao Biển → 3.000 Thỏi Vàng. Mỗi lần dùng cách nhau 3 phút</li>
+<li>🔥 <strong>Gom đủ 5 cái</strong>: mang tới NPC Bà Hạt Mít → chọn Đổi Sao Biển → nhận 25.000 Thỏi Vàng</li>
+</ul>
+</div>
+</div>
+<h3 class="sub">🎲 Tính năng Đúp Sao Biển</h3>
+<div class="body-copy">
+<p>👨‍🦳 Đến NPC Bà Hạt Mít, dùng Sao Biển + Thỏi Vàng để đúp.</p>
+<div class="card">
+<h4>💰 Phí — 500 Thỏi Vàng cho mỗi Sao Biển muốn đúp</h4>
+<ul>
+<li>1 Sao → 500 vàng</li>
+<li>2 Sao → 1.000 vàng</li>
+<li>3 Sao → 1.500 vàng</li>
+</ul>
+</div>
+<div class="card">
+<h4>🎯 Tỉ lệ thắng thua</h4>
+<ul>
+<li>🟢 25% thắng: nhận gấp đôi số Sao Biển đã cược</li>
+<li>🔴 75% thua: mất toàn bộ Sao Biển và Thỏi Vàng đã bỏ vào</li>
+</ul>
+</div>
+<div class="note">⚠️ Đây là tính năng may rủi rất cao, cân nhắc kỹ trước khi chơi và nhớ để đủ ô trống trong hành trang.</div>
+<p>Cơ hội làm giàu chia đều cho tất cả mọi người, không quan trọng đồ xịn hay cùi — chỉ quan trọng anh em cày chăm và nhân phẩm tốt tới đâu!</p>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap">
+<h2>👶 Dắt Bư về nhà</h2>
+<figure>
+<img alt="Sự kiện dẫn Bư nhận thưởng — hộ tống Mabu đến Đảo Kame" loading="lazy" src="img/su-kien-dan-bu.jpg"/>
+</figure>
+<div class="body-copy">
+<div class="card">
+<h4>Cách chơi</h4>
+<ul>
+<li>Gặp Osin ở làng Aru để nhận Mabu</li>
+<li>Hộ tống Bư về nhà — đi từ từ và tránh để quái tấn công Mabu</li>
+<li>Trả Mabu về Đảo Kame và nhận thưởng</li>
+</ul>
+</div>
+<div class="card">
+<h4>🎁 Phần thưởng</h4>
+<ul>
+<li>80% — 3 – 5 TV</li>
+<li>15% — đồ Thần Linh</li>
+<li>4% — cải trang Noel</li>
+<li>1% — Găng Thần và Nhẫn Thần Linh</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<main class="view" hidden="" id="lenh-game">
+<div class="hero">
+<div class="wrap">
+<h1>⌨️ Lệnh Game</h1>
+<p class="lede">Các lệnh gõ trực tiếp trong khung chat để hỗ trợ chơi nhanh hơn.</p>
+</div>
+</div>
+<section>
+<div class="wrap">
+<div class="body-copy">
+<div class="card">
+<h4>⚡ Tốc độ game</h4>
+<ul>
+<li><strong>Cheat 1-10</strong>: chỉnh tốc độ game</li>
+</ul>
+</div>
+<div class="card">
+<h4>🎒 Sapxep</h4>
+<ul>
+<li><strong>Sapxep</strong>: gộp Thỏi Vàng lại và sắp xếp lại hành trang (không gộp được chung với Thỏi Vàng khóa)</li>
+</ul>
+</div>
+<div class="card">
+<h4>🥚 Automotrungvip</h4>
+<ul>
+<li><strong>Automotrungvip</strong>: mở hết trứng có trong hành trang</li>
+<li>Khi ra Whis sẽ dừng; nếu không có Whis sẽ chốt con cuối cùng</li>
+</ul>
+</div>
+<div class="card">
+<h4>🏃 Tốc độ chạy</h4>
+<ul>
+<li><strong>S1-10</strong>: chỉnh tốc độ chạy</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<main class="view" hidden="" id="san-boss">
+<div class="hero">
+<div class="wrap">
+<h1>👹 Hướng dẫn săn boss</h1>
+<p class="lede">Boss xuất hiện theo giờ cố định tại các bản đồ cấp cao. Chuẩn bị kỹ và rủ thêm người cùng bang trước khi vào.</p>
+</div>
+</div>
+<section>
+<div class="wrap">
+<h2>🔥 Siêu Boss Ma Thần Hợp Lực</h2>
+<figure>
+<img alt="Thông báo cập nhật Boss Ma Thần Hợp Lực" loading="lazy" src="img/boss-ma-than.jpg"/>
+</figure>
+<div class="body-copy">
+<p>💥 VIP hay tân thủ vào đây đều có cơ hội như nhau. Boss này <strong>không cần Top Damage, không cần Last Hit</strong> — chỉ cần anh em chịu khó góp 1 hit là đã có cơ hội nhận siêu vật phẩm! 🎰</p>
+</div>
+<h3 class="sub">🛡️ Cơ chế Khiên Hư Vô — càng đông càng dễ hạ</h3>
+<div class="body-copy">
+<p>Ma Thần Hợp Lực sở hữu <strong>Khiên Bất Tử</strong>. ⚔️ Mọi đòn đánh vào Boss, dù sát thương mạnh đến đâu, cũng chỉ gây 1 Hit.</p>
+<div class="card">
+<h4>💢 Muốn phá khiên?</h4>
+<ul>
+<li>👉 Toàn bộ người chơi trong map phải cùng nhau tấn công Boss</li>
+<li>🔥 Khi Boss nhận đủ <strong>200 HIT trong vòng 15 giây</strong> → 💥 KHIÊN VỠ!</li>
+<li>😵 Boss bị choáng <strong>20 giây</strong></li>
+</ul>
+</div>
+<div class="card">
+<h4>Trong 20 giây choáng</h4>
+<ul>
+<li>🔴 Khiên biến mất</li>
+<li>🔴 Boss nhận 100% sát thương</li>
+<li>🔴 Anh em tha hồ xả skill, tung chiêu cuối, dồn damage</li>
+</ul>
+</div>
+<div class="note">⏰ Hết 20 giây, Boss kích hoạt lại Khiên và vòng chiến đấu tiếp tục. Càng nhiều người đánh, Boss càng nhanh mất khiên! 🤝</div>
+</div>
+<h3 class="sub">🎰 Phần thưởng — xổ số nhân phẩm</h3>
+<div class="body-copy">
+<div class="card">
+<ul>
+<li>❌ KHÔNG ưu tiên Last Hit</li>
+<li>❌ KHÔNG ưu tiên người gây sát thương cao nhất</li>
+<li>🎯 Chỉ cần bạn đã đánh Boss <strong>ít nhất 1 hit</strong> → được ghi danh!</li>
+</ul>
+</div>
+<p>Khi Boss bị tiêu diệt, hệ thống quay xổ số ngẫu nhiên 1 người may mắn trong danh sách. 🏆 Người được chọn nhận <strong>Nhẫn Hủy Diệt</strong>.</p>
+</div>
+<h3 class="sub">💍 Nhẫn Hủy Diệt</h3>
+<div class="body-copy">
+<div class="card">
+<h4>🎲 Chỉ số random cực độ</h4>
+<ul>
+<li>❤️ % HP  ·  💙 % KI  ·  ⚔️ % Sức đánh</li>
+<li>Random độ VIP: từ 1% → 8%</li>
+</ul>
+</div>
+<div class="note">🔒 Nhẫn Hủy Diệt khóa giao dịch vĩnh viễn — không mua, không bán, không chuyển nhượng. Muốn sở hữu chỉ có một cách: tự mình săn Boss! 🔥</div>
+<p>🚨 Đừng đứng nhìn — lập tổ đội, gọi anh em, kéo cả bang lên map, cùng nhau spam hit phá Khiên. Biết đâu người trúng Nhẫn Hủy Diệt tiếp theo chính là bạn! 😎</p>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap">
+<h2>💎 Tẩy tủy Cải trang Cậu Hít</h2>
+<div class="body-copy">
+<p>Cải trang xịn chưa chắc đã là mạnh nhất. Muốn biến Cải trang Cậu Hít thành cực phẩm thì đưa vào lò Tẩy Tủy và thử thách nhân phẩm! 😈</p>
+<div class="card">
+<ul>
+<li>📍 NPC phụ trách: <strong>Bà Hạt Mít</strong></li>
+<li>🏝️ Địa điểm: <strong>Đảo Kame</strong></li>
+</ul>
+</div>
+</div>
+<h3 class="sub">⚡ Tẩy tủy là gì?</h3>
+<div class="body-copy">
+<p>Mang Cải trang Cậu Hít đến gặp Bà Hạt Mít → chọn "Tẩy tủy". ✨ Chỉ số cũ sẽ được xóa bỏ và thay bằng chỉ số mới ngẫu nhiên.</p>
+<div class="card">
+<h4>🎲 2 chỉ số có thể nhận</h4>
+<ul>
+<li>⚔️ Sức đánh: từ 28% → 33%</li>
+<li>💥 Sức đánh chí mạng: từ 30% → 60%</li>
+</ul>
+</div>
+<div class="note">👉 Nhân phẩm càng cao, chỉ số càng đẹp. Biết đâu một lần tẩy lại ra ngay Cậu Hít max chỉ số! 🔥</div>
+</div>
+<h3 class="sub">🛡️ Không mất hạn sử dụng</h3>
+<div class="body-copy">
+<div class="card">
+<ul>
+<li>♾️ Đồ vĩnh viễn → vẫn vĩnh viễn</li>
+<li>⏳ Đồ có thời hạn → giữ nguyên thời hạn</li>
+</ul>
+</div>
+<p>Không có chuyện tẩy xong rồi bay ngày đâu nhé 😎</p>
+</div>
+<h3 class="sub">⚖️ Quy tắc &amp; chi phí</h3>
+<div class="body-copy">
+<div class="card">
+<h4>Giới hạn</h4>
+<ul>
+<li>Mỗi Cải trang Cậu Hít chỉ được tẩy tủy <strong>tối đa 3 lần</strong></li>
+<li>Sau 3 lần, trang bị khóa vĩnh viễn tính năng Tẩy Tủy</li>
+</ul>
+</div>
+<div class="card">
+<h4>💰 Chi phí tăng dần</h4>
+<ul>
+<li>🥇 Lần 1: 50 Thỏi Vàng</li>
+<li>🥈 Lần 2: 70 Thỏi Vàng</li>
+<li>🥉 Lần 3: 100 Thỏi Vàng</li>
+</ul>
+</div>
+<div class="note">🔥 Cân nhắc thật kỹ trước mỗi lần tẩy — đẹp thì giữ, chưa đẹp thì đánh cược tiếp! 🎰</div>
+</div>
+</div>
+</section>
+</main>
+<main class="view" hidden="" id="nhom-zalo">
+<div class="hero">
+<div class="wrap">
+<h1>💬 Link tham gia nhóm</h1>
+<p class="lede">Tham gia nhóm Zalo để nhận thông báo sự kiện, giftcode mới và được Admin hỗ trợ trực tiếp.</p>
+</div>
+</div>
+<section>
+<div class="wrap">
+<h2>Tham gia nhóm ngay</h2>
+<h3 class="sub">Cách 1 — Bấm vào link</h3>
+<div class="body-copy">
+<p><a href="https://zalo.me/g/0hie1dg54051rhoysghu" rel="noopener" target="_blank">https://zalo.me/g/0hie1dg54051rhoysghu</a></p>
+</div>
+<h3 class="sub">Cách 2 — Quét mã QR</h3>
+<div class="body-copy">
+<figure>
+<img alt="Mã QR nhóm Zalo Hồi Ức NRO" loading="lazy" src="img/qr-zalo.jpg"/>
+<figcaption>Mở Zalo và quét mã này để vào nhóm</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</main>
+<div id="lightbox"><img alt="" src=""/></div>
+<div aria-labelledby="qrTitle" aria-modal="true" id="qrOverlay" role="dialog">
+<div class="qr-box">
+<h3 id="qrTitle">Donate</h3>
+<p>Quét mã bên dưới để ủng hộ máy chủ.</p>
+<img alt="Mã QR chuyển khoản" src="img/qr.jpg"/>
+<p class="qr-note">Cập nhật tiền donate liên tục, thống kê rõ ràng.</p>
+<button class="qr-close" type="button">Đóng</button>
+</div>
+</div>
 <script>
 (function(){
   var ov = document.getElementById('qrOverlay');
@@ -938,6 +1032,5 @@ ol.guide p{color:#cfd7ea;font-size:15px}
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.removeAttribute('open'); });
 })();
 </script>
-
 </body>
 </html>
