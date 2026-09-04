@@ -215,6 +215,7 @@ ol.guide p{color:#cfd7ea;font-size:15px}
       <ul>
         <li><a role="button" tabindex="0" data-page="home">Hướng dẫn</a></li>
         <li><a role="button" tabindex="0" data-page="su-kien">Sự kiện đang diễn ra</a></li>
+        <li><a role="button" tabindex="0" data-page="lenh-game">Lệnh Game</a></li>
         <li><a role="button" tabindex="0" data-page="san-boss">Hướng dẫn săn boss</a></li>
         <li><a role="button" tabindex="0" data-page="nhom-zalo">Link tham gia nhóm</a></li>
       </ul>
@@ -299,7 +300,11 @@ ol.guide p{color:#cfd7ea;font-size:15px}
 
     <h3 class="sub">🐉 Đệ tử</h3>
     <div class="body-copy">
-      <p>Tất cả các loại Đệ Tử đều săn được trong server. Một số loại Đệ có thể mặc đồ của tất cả hành tinh.</p>
+      <p>Tất cả các loại Đệ Tử đều săn được trong server. Tất cả đệ mặc được đồ full hành tinh.</p>
+      <figure>
+        <img src="img/de-tu-mac-do-full-hanh-tinh.jpg" alt="Đệ tử mặc đồ full hành tinh" loading="lazy">
+        <figcaption>Đệ tử mặc đồ của nhiều hành tinh trong game</figcaption>
+      </figure>
       <div class="card">
         <h4>👕 Đệ đặc biệt</h4>
         <ul>
@@ -318,7 +323,7 @@ ol.guide p{color:#cfd7ea;font-size:15px}
         <h4>⚡ Đệ Berus &amp; Whis</h4>
         <ul>
           <li>Berus: chỉ số 80 – 99%</li>
-          <li>Whis: chỉ số 100 – 106%</li>
+          <li>Whis: chỉ số 100 – 110%</li>
           <li>Up quái bằng Berus/Whis có thể rơi Thỏi Vàng</li>
         </ul>
       </div>
@@ -347,6 +352,7 @@ ol.guide p{color:#cfd7ea;font-size:15px}
         <h4>📈 Up TNSM</h4>
         <ul>
           <li>Map BDKB hiện là nơi có TNSM cao nhất — nên tập trung up ở đây</li>
+          <li>Map đệ tử (ở Quy Lão Kame): nhớ mua bùa trong map đệ để up. Có tỉ lệ rơi đồ VIP: đồ Hủy Diệt, đồ 4s–8s, đồ Thần,...</li>
         </ul>
       </div>
     </div>
@@ -662,6 +668,47 @@ ol.guide p{color:#cfd7ea;font-size:15px}
   </section>
 </main>
 
+<main id="lenh-game" class="view" hidden>
+  <div class="hero">
+    <div class="wrap">
+      <h1>⌨️ Lệnh Game</h1>
+      <p class="lede">Các lệnh gõ trực tiếp trong khung chat để hỗ trợ chơi nhanh hơn.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="body-copy">
+        <div class="card">
+          <h4>⚡ Tốc độ game</h4>
+          <ul>
+            <li><strong>Cheat 1-10</strong>: chỉnh tốc độ game</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>🎒 Sapxep</h4>
+          <ul>
+            <li><strong>Sapxep</strong>: gộp Thỏi Vàng lại và sắp xếp lại hành trang (không gộp được chung với Thỏi Vàng khóa)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>🥚 Automotrungvip</h4>
+          <ul>
+            <li><strong>Automotrungvip</strong>: mở hết trứng có trong hành trang</li>
+            <li>Khi ra Whis sẽ dừng; nếu không có Whis sẽ chốt con cuối cùng</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>🏃 Tốc độ chạy</h4>
+          <ul>
+            <li><strong>S1-10</strong>: chỉnh tốc độ chạy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
 <main id="san-boss" class="view" hidden>
   <div class="hero">
     <div class="wrap">
@@ -843,7 +890,7 @@ ol.guide p{color:#cfd7ea;font-size:15px}
   // ── Chuyển "trang" mà không tải lại ──
   var views = document.querySelectorAll('.view');
   var navLinks = document.querySelectorAll('[data-page]');
-  var titles = { 'home':'Hồi Ức NRO', 'su-kien':'Sự kiện đang diễn ra', 'san-boss':'Hướng dẫn săn boss', 'nhom-zalo':'Link tham gia nhóm' };
+  var titles = { 'home':'Hồi Ức NRO', 'su-kien':'Sự kiện đang diễn ra', 'lenh-game':'Lệnh Game', 'san-boss':'Hướng dẫn săn boss', 'nhom-zalo':'Link tham gia nhóm' };
 
   function show(id){
     if(!document.getElementById(id)) id = 'home';
